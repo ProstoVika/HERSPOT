@@ -1,0 +1,8 @@
+[
+  { "location": "Central Park", "rating": "Bad", "rated_by": "Joe Bloggs", "comment": "This place made me feel really safe" },
+  { "location": "Downtown", "rating": "Good", "rated_by": "Joe", "comment": "This place made me feel really safe" },
+  { "location": "Main Street", "rating": "Bad", "rated_by": "Joe Bloggs", "comment": "This place made me feel really safe" },
+  { "location": "Mall Parking", "rating": "Bad", "rated_by": "Joe Bloggs", "comment": "This place made me feel really safe" },
+  { "location": "Subway Station", "rating": "Bad", "rated_by": "Joe Bloggs", "comment": "This place made me feel really safe" },
+  { "location": "Library", "rating": "Bad", "rated_by": "Joe Bloggs", "comment": "This place made me feel really safe" }
+]
