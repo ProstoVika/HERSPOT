@@ -1,8 +1,8 @@
 [
-  { "location_name": "Abuelo, Covent Garden", "lat": "51.5130", "long":  "0.1243", "rating": "Bad", "rated_by": "Anonymous Weasel", "comment": "This place made me feel really safe" },
-  { "location_name": "Rockit, Shoreditch", "lat": "51.3113", "long":  "0.0442", "rating": "Good", "rated_by": "Sneaky Fox", "comment": "This place made me feel really safe" },
-  { "location_name": "Royal Festival Hall, South Bank", "lat": "51.5052", "long":  "0.1162", "rating": "Bad", "rated_by": "Lonely Capybara", "comment": "This place made me feel really safe" },
-  { "location_name": "Katsute 100, Islington", "lat": "51.5342", "long":  "0.1056", "rating": "Bad", "rated_by": "Inquisitive Mouse", "comment": "This place made me feel really safe" },
-  { "location_name": "Hayward Gallery, Waterloo", "lat": "51.5068", "long":  "0.1164", "rating": "Good", "rated_by": "Short Giraffe", "comment": "This place made me feel really safe" },
-  { "location_name": "Liverpool Street", "lat": "51.5176", "long":  "0.0824", "rating": "Bad", "rated_by": "Speedy Lizard", "comment": "This place made me feel really safe" }
+  { "location_name": "Abuelo, Covent Garden", "lat": 51.5130, "long":  0.1243, "rating": "Bad", "rated_by": "Anonymous Weasel", "comment": "This place made me feel really safe" },
+  { "location_name": "Rockit, Shoreditch", "lat": 51.3113, "long":  0.0442, "rating": "Good", "rated_by": "Sneaky Fox", "comment": "This place made me feel really safe" },
+  { "location_name": "Royal Festival Hall, South Bank", "lat": 51.5052, "long":  0.1162, "rating": "Bad", "rated_by": "Lonely Capybara", "comment": "This place made me feel really safe" },
+  { "location_name": "Katsute 100, Islington", "lat": 51.5342, "long":  0.1056, "rating": "Bad", "rated_by": "Inquisitive Mouse", "comment": "This place made me feel really safe" },
+  { "location_name": "Hayward Gallery, Waterloo", "lat": 51.5068, "long":  0.1164, "rating": "Good", "rated_by": "Short Giraffe", "comment": "This place made me feel really safe" },
+  { "location_name": "Liverpool Street", "lat": 51.5176, "long":  0.0824, "rating": "Bad", "rated_by": "Speedy Lizard", "comment": "This place made me feel really safe" }
 ]
