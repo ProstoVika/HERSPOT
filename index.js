@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         data.forEach(item => {
             let li = document.createElement('li');
-            li.innerHTML = `<strong>${item.location}</strong> - ${item.rating} (${item.rated_by})<br><em>${item.comment}</em>`;
+            li.innerHTML = `<strong>${item.location_name}</strong> - ${item.rating} (${item.rated_by})<br><em>${item.comment}</em>`;
             li.style.color = item.rating === "Bad" ? "red" : "green";
             suggestionsList.appendChild(li);
         });
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     const applySearch = () => {
         let query = searchInput.value.trim().toLowerCase();
-        filteredData = resdata.filter(item => item.location.toLowerCase().includes(query));
+        filteredData = resdata.filter(item => item.location_name.toLowerCase().includes(query));
         applyFilter();
     };
 
