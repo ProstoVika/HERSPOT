@@ -24,6 +24,8 @@ body {
 
 #map {
     position: absolute;
+    border-radius: 10px;
+    border: 4px solid black;
     top: 0;
     left: 0;
     width: 100%;
@@ -52,7 +54,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     padding: 20px;
-    width: 650px;
+    width: 500px;
     height: 644px;
     background-color: #18191D;
     box-shadow: 25px 25px 75px rgba(0, 0, 0, 0.25),

@@ -74,3 +74,81 @@ document.addEventListener('DOMContentLoaded', async () => {
     await loadData();
 });
 
+let map, infoWindow;
+
+function initMap() {
+  // Initialize the map but don't set a center until we get the user's location
+  map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 6, // Set an initial zoom level
+  });
+  infoWindow = new google.maps.InfoWindow();
+
+  // Use the geolocation API to get the user's current location
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(
+      (position) => {
+        const pos = {
+          lat: position.coords.latitude,
+          lng: position.coords.longitude,
+        };
+
+        // Now that we have the user's location, set the map center
+        map.setCenter(pos);
+        map.setZoom(15); // Optional: zoom in closer to the location
+
+        // Add a marker at the user's location
+        const centralmarker = new google.maps.Marker({
+          position: pos,
+          map: map,
+          title: "You are here!",
+          icon: {
+              url: './her-spot.png',  // Use a custom image URL
+              scaledSize: new google.maps.Size(50, 50),  // Set the size here (width, height)
+            }
+        });
+
+        locations.forEach((location) => {
+          const marker = new google.maps.Marker({
+            position: { lat: location.lat, lng: location.lng },
+            map: map,
+            title: location.location_name,
+            icon: {
+              url: location.rating == "bad" ? './danger-marker.png' : './safe-marker.png',  // Use a custom image URL
+              scaledSize: new google.maps.Size(100, 100),  // Set the size here (width, height)
+            }
+          });
+
+          // Add an info window for each marker
+          marker.addListener("click", () => {
+            infoWindow.setContent(`
+              <div style="font-size: 40px; min-height: 10vh; min-width: 40vw; text-align: center">
+                <div style="font-weight: bold; color: ${location.rating === "bad" ? 'red' : 'green'}">${location.location_name}</div>
+                <div>${location.comment}</div>
+              </div>`);
+            infoWindow.open(map, marker);
+          });
+        });
+      },
+      () => {
+        // Handle error if geolocation fails
+        handleLocationError(true, infoWindow, map.getCenter());
+      }
+    );
+  } else {
+    // Handle the case if geolocation is not supported
+    handleLocationError(false, infoWindow, map.getCenter());
+  }
+}
+
+// Function to handle geolocation errors
+function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+  infoWindow.setPosition(pos);
+  infoWindow.setContent(
+    browserHasGeolocation
+      ? "Error: The Geolocation service failed."
+      : "Error: Your browser doesn't support geolocation."
+  );
+  infoWindow.open(map);
+}
+
+window.initMap = initMap;
